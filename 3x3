@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int matrix[3][3];
+    int transposed[3][3];
+
+    // Read the matrix from user input
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            std::cin >> matrix[i][j];
+        }
+    }
+
+    // Create the transposed matrix
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            transposed[j][i] = matrix[i][j];
+        }
+    }
+
+    // Print the transposed matrix
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            std::cout << transposed[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
